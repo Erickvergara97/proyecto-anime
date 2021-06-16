@@ -1,0 +1,165 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: black;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background-image: url("./images/anime-wallpaper.jpg");
+}
+
+header h1 {
+  margin: 43px 0;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: silver;
+  text-align: center;
+  font-size: 50px;
+}
+
+header h1 span {
+  text-transform: lowercase;
+}
+
+.flexContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flexContent section {
+  padding: 0 10%;
+}
+
+.flexContent section h3 {
+  text-align: center;
+  text-transform: uppercase;
+  color: orange;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.flexContent section h3 span {
+  font-size: 80px;
+  color: darkblue;
+  font-weight: 5000;
+}
+
+.flexContent section nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flexContent section nav a {
+  margin: 0 10px;
+  padding: 10px 20px;
+  text-align: center;
+  color: darkblue;
+  font-size: 16px;
+  margin-bottom: 16px;
+  background-color: orange;
+  border-radius: 20px;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.flexContent section nav a:hover {
+  background-color: darkblue;
+  color: orange;
+}
+
+main {
+  background-image: url("./images/main-wallpaper.jpg");
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  border: 5px solid darkgray;
+}
+
+main .searchBar {
+  border-radius: 15px;
+  font-size: 30px;
+  background-color: white;
+  margin: 40px;
+  padding: 10px;
+  width: 50vw;
+  height: auto;
+}
+
+main .picsWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+}
+
+.container-animes {
+  width: 25%;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.picsStyle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.picsStyle h3 {
+  margin-top: 15px;
+  padding: 5px;
+  background-color: grey;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
