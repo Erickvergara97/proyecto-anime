@@ -55,7 +55,7 @@ header{
 
 			a {
                 margin: 0 10px;
-				padding: 10px 20px;
+				padding: 10px;
 				text-align: center;
 
 				color: darkblue;
@@ -70,8 +70,7 @@ header{
 			
 			}
             a:hover {
-                background-color: darkblue;
-                color: orange;
+                transform: scale(1.1);
             }
 		}
 	}
@@ -131,6 +130,14 @@ form{
 .container-animes{
     width: 20%;
     border-radius: 10px;
+
+    a{
+        border-radius: 10px;
+        padding: 10px;
+        background-color: gray;
+        text-align: center;
+        color: white;
+    }
     
     .picsStyle{
         display: flex;
@@ -145,12 +152,6 @@ form{
         }
         .containerDescription{
             width: 100%;
-            h3,p{
-                padding: 5px;
-                background-color: gray;
-                text-align: center;
-                color: white;
-            }
         }
     }
 }
