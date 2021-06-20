@@ -207,8 +207,8 @@ form {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -221,8 +221,8 @@ form {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
   padding: 5px;
   border: 2px solid silver;
   width: 225px;
@@ -270,6 +270,7 @@ form {
           align-items: center;
   border: 2px solid silver;
   padding: 35px;
+  width: 78%;
 }
 
 .flexDetails .infoSection h3, .flexDetails .infoSection button {

@@ -164,7 +164,7 @@ form{
     border-top: 5px solid darkgray;
     border-bottom: 5px solid darkgray;
     display: flex;
-    flex-flow: row;
+    flex-flow: row wrap;
     justify-content: center;
    
 
@@ -172,7 +172,7 @@ form{
 
     .infoAside{
         display: flex;
-        flex-flow: column;
+        flex-flow: column wrap;
         padding: 5px;
         border: 2px solid silver;
         width: 225px;
@@ -200,6 +200,11 @@ form{
         align-items: center;
         border: 2px solid silver;
         padding: 35px;
+        width: 78%;
+        // iframe{
+        //     width: 55%;
+        //     height: 100%;
+        // }
 
         h3, button{
             text-transform: capitalize;
