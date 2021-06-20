@@ -11,6 +11,10 @@ function App() {
   const[topanime, setTopanime] = useState([]);
   const[search, setSearch] = useState("");
 
+  function scrolltop() {
+    window.scrollTo(0, 0);
+  }
+
   const GetTopAnime = async () => {
     const temp = await fetch(`https://api.jikan.moe/v3/top/anime/1/bypopularity`)
     .then(res => res.json());
@@ -22,8 +26,8 @@ function App() {
     GetTopAnime();
   }, []);
 
-  const searchInput = find =>{
-    find.preventDefault();
+  const searchInput = event =>{
+    event.preventDefault();
 
     fetchAnime(search);
   }
@@ -47,12 +51,13 @@ function App() {
               searchInput={searchInput} 
               search={search} 
               animelist={animelist} 
-              setSearch={setSearch}/>
+              setSearch={setSearch}
+              />
           </Route>
           <Route path="/anime/:id">
-            <AnimeDetails/>
+            <AnimeDetails />
           </Route>
-          <TopsAnimes topanime={topanime}/>
+            <TopsAnimes topanime={topanime}/>
         </div>
       </div>
     </BrowserRouter>

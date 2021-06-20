@@ -3,19 +3,18 @@ import AnimePic from './AnimePic'
 
 function Main(props) {
     return (
-        <main>
-            <div>
-                <form 
-                onSubmit={props.searchInput} >   
-                    <input 
-                    className="searchBar"
-                    type="search" 
-                    placeholder="search for an anime" 
-                    required 
-                    value={props.search} 
-                    onChange={find => props.setSearch(find.target.value)}/>
-                </form>
-            </div>
+        <main >
+            <form 
+            onSubmit={props.searchInput} >   
+                <input 
+                className="searchBar"
+                type="search" 
+                placeholder="search for an anime" 
+                required 
+                value={props.search} 
+                onChange={find => props.setSearch(find.target.value)}/>
+                <button className="searchButton">search</button>
+            </form>
             <div className="picsWrap">
                 {props.animelist.map(anime=>(
                     <AnimePic

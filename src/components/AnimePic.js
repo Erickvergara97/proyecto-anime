@@ -6,10 +6,15 @@ function AnimePic({anime}) {
 
         <article className="container-animes">
             <Link to={`/anime/${anime.mal_id}`} className="picsStyle">
-                <figure >
-                    <img src={anime.image_url} alt="" />
+                <figure>
+                    <img src={anime.image_url} alt="" className="imageStyle" />
                 </figure>
-                <h3>{anime.title}</h3>
+                <div className="containerDescription">
+                    <h3>{anime.title}</h3>
+                    <p>
+                    {anime.synopsis}
+                    </p>
+                </div>
             </Link>
         </article>
     )
