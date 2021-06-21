@@ -286,13 +286,13 @@ form {
   border: none;
   padding: 5px;
   font-weight: bold;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .flexDetails button:hover {
   background-color: darkblue;
   color: orange;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
 }
 
 .imageStyle {

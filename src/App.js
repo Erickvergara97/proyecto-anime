@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import './style.css';
 import Header from './components/Header';
 import TopsAnimes from './components/TopsAnimes';
@@ -10,10 +10,8 @@ function App() {
   const[animelist, setAnimelist] = useState([]);
   const[topanime, setTopanime] = useState([]);
   const[search, setSearch] = useState("");
+  console.log(search);
 
-  function scrolltop() {
-    window.scrollTo(0, 0);
-  }
 
   const GetTopAnime = async () => {
     const temp = await fetch(`https://api.jikan.moe/v3/top/anime/1/bypopularity`)
@@ -36,27 +34,40 @@ function App() {
     const temp = await fetch(`https://api.jikan.moe/v3/search/anime?q=${query}&order_by=title&sort=asc&limit=10`)
       .then(res => {
         console.log(res)
-        return res.json()});
+        if(res.status === 404){
+          
+        }else{
+          return res.json()
+        }
+      });
 
-    setAnimelist(temp.results);
+      if(temp === undefined){
+        return ""
+      }else{
+        setAnimelist(temp.results);
+      }
+
   }
  
   return (
     <BrowserRouter>
       <div className="App">
-        <Header/>
+        <Route path="/">
+          <Header/>
+        </Route>
         <div className="flexContent">
-          <Route exact path="/">
-            <Main
-              searchInput={searchInput} 
-              search={search} 
-              animelist={animelist} 
-              setSearch={setSearch}
+            <Route exact path="/">
+              <Main
+                searchInput={searchInput} 
+                search={search} 
+                animelist={animelist} 
+                setSearch={setSearch}
               />
-          </Route>
-          <Route path="/anime/:id">
-            <AnimeDetails />
-          </Route>
+                
+            </Route>
+            <Route path="/anime/:id">
+              <AnimeDetails />
+            </Route>
             <TopsAnimes topanime={topanime}/>
         </div>
       </div>
