@@ -3,9 +3,6 @@ import AnimePic from './AnimePic'
 
 function Main(props) {
     return (
-
-        
-
         <main >
             <form 
             onSubmit={props.searchInput} >   
@@ -22,13 +19,11 @@ function Main(props) {
             <div className="picsWrap">
                 {props.animelist.map(anime=>(
                     <AnimePic
-                    key={anime.mal_id} /*cualquier valor*/
-                    anime={anime}/> /*pasar json*/
+                    key={anime.mal_id}
+                    anime={anime}/>
                     ))}
-            </div>
-            
-        </main>
-        
-        )
+            </div>           
+        </main>      
+    )
 }
 export default Main

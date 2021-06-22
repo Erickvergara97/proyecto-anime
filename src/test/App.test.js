@@ -4,8 +4,29 @@ import '@testing-library/react'
 import { render, screen } from '@testing-library/react';
 import { prettyDOM } from '@testing-library/dom';
 import App from '../App';
+import anime from './anime';
 
 
+
+function fetchAnime() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve(anime.id);
+    }, 100);
+  });
+}
+
+test("data to be anime.id", () => {
+  return expect(fetchAnime()).resolves.toBe(anime.id);
+});
+
+
+test('render div', () => {
+  const setTopanime = [];
+  const component = render(<App/>)
+  expect.arrayContaining(setTopanime)
+  
+})
 
 
 

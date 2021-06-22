@@ -10,8 +10,6 @@ function App() {
   const[animelist, setAnimelist] = useState([]);
   const[topanime, setTopanime] = useState([]);
   const[search, setSearch] = useState("");
-  console.log(search);
-
 
   const GetTopAnime = async () => {
     const temp = await fetch(`https://api.jikan.moe/v3/top/anime/1/bypopularity`)
@@ -33,7 +31,6 @@ function App() {
   const fetchAnime = async (query) => {
     const temp = await fetch(`https://api.jikan.moe/v3/search/anime?q=${query}&order_by=title&sort=asc&limit=10`)
       .then(res => {
-        console.log(res)
         if(res.status === 404){
           
         }else{

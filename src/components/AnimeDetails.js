@@ -12,7 +12,6 @@ function AnimeDetails() {
     function SetInfo (data) {
         setAnimeIndex(data);
         setAnimeGenre(data.genres);
-        
     }
     
     useEffect(() => {
@@ -23,7 +22,6 @@ function AnimeDetails() {
         const data = await fetch(`https://api.jikan.moe/v3/anime/${id}`)
         .then(res => res.json());
 
-        console.log(data);
         SetInfo(data);
     };
 

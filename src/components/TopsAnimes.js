@@ -4,11 +4,9 @@ import { Link } from 'react-router-dom'
 
 
 function TopsAnimes({topanime}) {
-
     function scrolltop() {
         window.scrollTo(0, 0);
-    }
-    
+    } 
     return (
         <section>  
             <h2>top <span>10</span> animes</h2>
@@ -28,7 +26,4 @@ function TopsAnimes({topanime}) {
         </section>
     )
 }
-
 export default TopsAnimes
-
-//funcion para map animes y luego llamalo en TopsAnimes

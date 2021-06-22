@@ -1,10 +1,9 @@
 import React from 'react';
 import '@testing-library/jest-dom/extend-expect'
 import '@testing-library/react'
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import AsideDetails from '../AnimeDetailsComponents/asideDetails';
-import anime from "./anime"
-import { array } from 'prop-types';
+
 
 
 test('render elements', () => {
@@ -31,9 +30,6 @@ test('render elements', () => {
     const animeGenre = [];
     const setAnimeIndex = jest.fn();
     const setAnimeGenre = jest.fn();
-    const mapping = jest.fn(genre =>(
-        genre.genres.name
-    ))
     const component = render(
     <AsideDetails
     animeIndex={animeIndex}
