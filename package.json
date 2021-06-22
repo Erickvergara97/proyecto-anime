@@ -1,5 +1,5 @@
 {
-  "homepage":"https://erickvergara97.github.io/proyecto-anime",
+  "homepage": "https://erickvergara97.github.io/proyecto-anime",
   "name": "animewiki",
   "version": "0.1.0",
   "private": true,
@@ -14,8 +14,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -41,6 +41,7 @@
   },
   "devDependencies": {
     "@testing-library/react": "^11.2.7",
+    "enzyme": "^3.11.0",
     "gh-pages": "^3.2.3",
     "jest-expect": "0.0.1"
   }
