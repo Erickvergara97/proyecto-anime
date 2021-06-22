@@ -1,5 +1,5 @@
 {
-  "homepage": "https://erickvergara97.github.io/proyecto-anime",
+  "homepage": "https://erickvergara97.github.io/proyecto-anime/",
   "name": "animewiki",
   "version": "0.1.0",
   "private": true,
@@ -13,6 +13,9 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
   },
+
+  "proxy":"https://erickvergara97.github.io/proyecto-anime/",
+
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
