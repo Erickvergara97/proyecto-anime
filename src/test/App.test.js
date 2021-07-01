@@ -1,34 +1,23 @@
 import React from 'react';
 import '@testing-library/jest-dom/extend-expect'
 import '@testing-library/react'
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { prettyDOM } from '@testing-library/dom';
 import App from '../App';
-import anime from './anime';
-
-
-
-function fetchAnime() {
-  return new Promise(resolve => {
-    setTimeout(() => {
-      resolve(anime.id);
-    }, 100);
-  });
-}
 
 test("data to be anime.id", () => {
-  return expect(fetchAnime()).resolves.toBe(anime.id);
+  const fetchAnime = jest.fn()
+  const searchInput = jest.fn(() =>{
+    return fetchAnime("naruto")
+  })
+  expect(searchInput()).toEqual(fetchAnime("naruto"));
 });
-
 
 test('render div', () => {
   const setTopanime = [];
   const component = render(<App/>)
   expect.arrayContaining(setTopanime)
-  
 })
-
-
 
 test('render div', () => {
   const component = render(<App/>)

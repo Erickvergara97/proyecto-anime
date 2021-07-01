@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import './style.css';
 import Header from './components/Header';
 import TopsAnimes from './components/TopsAnimes';
@@ -59,8 +59,7 @@ function App() {
                 search={search} 
                 animelist={animelist} 
                 setSearch={setSearch}
-              />
-                
+              />   
             </Route>
             <Route path="/anime/:id">
               <AnimeDetails />

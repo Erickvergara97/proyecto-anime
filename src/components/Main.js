@@ -13,7 +13,6 @@ function Main(props) {
                 required 
                 value={props.search} 
                 onChange={find => props.setSearch(find.target.value)}/>
-               
                 <button className="searchButton">search</button>
             </form>
             <div className="picsWrap">

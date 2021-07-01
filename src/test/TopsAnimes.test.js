@@ -4,11 +4,7 @@ import '@testing-library/jest-dom/extend-expect'
 import '@testing-library/react'
 import { render } from '@testing-library/react';
 import TopsAnimes from "../components/TopsAnimes";
-import {shallow} from "enzyme"
 import userEvent from '@testing-library/user-event'
-
-
-const dispatchMock = jest.fn();
 
 
 test('render TopsAnimes', () => {
