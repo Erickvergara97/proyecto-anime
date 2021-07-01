@@ -46,7 +46,7 @@ function AnimeDetails() {
                 <p>
                     {animeIndex.synopsis}
                 </p>
-                <Link to="/">
+                <Link to="/proyecto-anime">
                     <button >return</button>
                 </Link>
             </section>

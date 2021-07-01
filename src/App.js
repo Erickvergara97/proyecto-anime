@@ -53,7 +53,7 @@ function App() {
           <Header/>
         </Route>
         <div className="flexContent">
-            <Route exact path="/">
+            <Route exact path="/proyecto-anime">
               <Main
                 searchInput={searchInput} 
                 search={search} 
