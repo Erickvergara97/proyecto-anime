@@ -39,6 +39,16 @@ function AsideDetails(props) {
                 {props.animeIndex.duration}isode
             </li>
         </ul> 
+
+
+        <h3>
+            popularity:
+        </h3>
+        <ul>
+            <li>
+                {props.animeIndex.popularity}
+            </li>
+        </ul>
     
         
     </aside>
